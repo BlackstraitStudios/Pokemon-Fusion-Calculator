@@ -65,7 +65,6 @@
       <DependentUpon>CalcWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="PokeStat.cs" />
-    <Compile Include="Generatefile.cs" />
     <Compile Include="DexData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

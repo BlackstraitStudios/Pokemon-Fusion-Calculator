@@ -17,7 +17,6 @@ namespace Pokemon_Fusion_Calculator
     public partial class CalcWindow : Form
     {
         FolderBrowserDialog fb = new FolderBrowserDialog();
-        Generatefile gf = new Generatefile();
         
         public CalcWindow()
         {
@@ -32,7 +31,6 @@ namespace Pokemon_Fusion_Calculator
             }
             headComponent.KeyDown += textbox_KeyDown;
             bodyComponent.KeyDown += textbox_KeyDown;
-            //gf.dothing();
         }
         void textbox_KeyDown(object sender, KeyEventArgs e)
         {
@@ -43,70 +41,53 @@ namespace Pokemon_Fusion_Calculator
             }
         }
 
-        string fetchData(string pokemon)
-        {
-            string bakenumber = "";
-            if (pokemon.Length < 3)
-            {
-                for (int i = 0; i < 3-pokemon.Length; i++)
-                {
-                    bakenumber += "0";
-                }
-                bakenumber += pokemon;
-            }
-            string bakedUrl = "https://www.serebii.net/pokedex-sm/" + bakenumber + ".shtml";
-            HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create(bakedUrl);
-            myRequest.Method = "GET";
-            WebResponse myResponse = myRequest.GetResponse();
-            StreamReader sr = new StreamReader(myResponse.GetResponseStream(), System.Text.Encoding.UTF8);
-            string result = sr.ReadToEnd();
-            sr.Close();
-            myResponse.Close();
-            Console.Write(result);
-            return result;
-        }
-
         void fuseButton(object sender, EventArgs e)
         {
             if (headComponent.Text != "" && bodyComponent.Text != "")
             {
                 string a = char.ToUpper(headComponent.Text[0]) + headComponent.Text.Substring(1);
                 string b = char.ToUpper(bodyComponent.Text[0]) + bodyComponent.Text.Substring(1);
-                int hc = 1;
-                int bc = 1;
+                int hc;
+                int bc;
+              
+                if (DexData.pokestats.ContainsKey(a) && DexData.pokestats.ContainsKey(b))
+                {
+                    hc = DexData.pokestats[a].DexNumber;
+                    bc = DexData.pokestats[b].DexNumber;
+                }
+                else
+                {
+                    return;
+                }
+
                 headLabelL.Text = a;
                 headLabelR.Text = b;
                 bodyLabelL.Text = b;
                 bodyLabelR.Text = a;
+                string fusionPath = Properties.Settings.Default.GameDirectory + @"\Graphics\CustomBattlers\" + hc + "." + bc + ".png";
+                string reverseFusionPath = Properties.Settings.Default.GameDirectory + @"\Graphics\CustomBattlers\" + bc + "." + hc + ".png";
+                Console.WriteLine(fusionPath);
 
-                if (DexData.pokemon.ContainsKey(a) && DexData.pokemon.ContainsKey(b))
+                if (File.Exists(fusionPath))
                 {
-                    hc = DexData.pokemon[a];
-                    bc = DexData.pokemon[b];
-                }
-
-                string fusionString = "";
-                fusionString = headComponent.Text + "." + bodyComponent.Text;
-
-                string fusionPath = Properties.Settings.Default.GameDirectory + @"\Graphics\CustomBattlers\" + fusionString + ".png";
-
-                if (bodyComponent.Text != "")
-                {
-                    if (File.Exists(fusionPath))
-                    {
-                        pictureBox1.Image = Image.FromFile(fusionPath);
-                        pictureBox2.Image = Image.FromFile(fusionPath);
-                    }
-                    else
-                    {
-                        pictureBox1.Image = Image.FromFile($@"{Properties.Settings.Default.GameDirectory}\Graphics\Battlers\{hc}\{hc}.{bc}.png");
-                        pictureBox2.Image = Image.FromFile($@"{Properties.Settings.Default.GameDirectory}\Graphics\Battlers\{bc}\{bc}.{hc}.png");
-                    }
+                    Console.WriteLine("fusion found");
+                    pictureBox1.Image = Image.FromFile(fusionPath);
                 }
                 else
                 {
-                    pictureBox1.Image = Image.FromFile($@"{Properties.Settings.Default.GameDirectory}\Graphics\Battlers\{hc}\{bc}.png");
-                    pictureBox2.Image = Image.FromFile($@"{Properties.Settings.Default.GameDirectory}\Graphics\Battlers\{bc}\{hc}.png");
+                    Console.WriteLine("fusion not found");
+                    pictureBox1.Image = Image.FromFile($@"{Properties.Settings.Default.GameDirectory}\Graphics\Battlers\{hc}\{hc}.{bc}.png");
+                }
+
+                if (File.Exists(reverseFusionPath))
+                {
+                    Console.WriteLine("reverse found");
+                    pictureBox2.Image = Image.FromFile(reverseFusionPath);
+                }
+                else
+                {
+                    Console.WriteLine("reverse not found");
+                    pictureBox2.Image = Image.FromFile($@"{Properties.Settings.Default.GameDirectory}\Graphics\Battlers\{bc}\{bc}.{hc}.png");
                 }
             }
         }
