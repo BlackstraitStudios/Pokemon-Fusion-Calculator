@@ -64,6 +64,7 @@
     <Compile Include="CalcWindow.Designer.cs">
       <DependentUpon>CalcWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="FusionData.cs" />
     <Compile Include="PokeStat.cs" />
     <Compile Include="DexData.cs" />
     <Compile Include="Program.cs" />
