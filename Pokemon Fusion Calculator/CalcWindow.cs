@@ -18,7 +18,6 @@ namespace Pokemon_Fusion_Calculator
     {
         FolderBrowserDialog fb = new FolderBrowserDialog();
         Generatefile gf = new Generatefile();
-        csvparser cp = new csvparser();
         
         public CalcWindow()
         {
@@ -31,10 +30,8 @@ namespace Pokemon_Fusion_Calculator
                 Properties.Settings.Default.GameDirectory = fb.SelectedPath;
                 Properties.Settings.Default.Save();
             }
-            button1.Click += fuseButton;
             headComponent.KeyDown += textbox_KeyDown;
             bodyComponent.KeyDown += textbox_KeyDown;
-            cp.testfunc();
             //gf.dothing();
         }
         void textbox_KeyDown(object sender, KeyEventArgs e)
@@ -75,8 +72,6 @@ namespace Pokemon_Fusion_Calculator
             {
                 string a = char.ToUpper(headComponent.Text[0]) + headComponent.Text.Substring(1);
                 string b = char.ToUpper(bodyComponent.Text[0]) + bodyComponent.Text.Substring(1);
-                //string headData = fetchData(DexData.pokemon[a].ToString());
-                //string bodyData = fetchData(DexData.pokemon[b].ToString());
                 int hc = 1;
                 int bc = 1;
                 headLabelL.Text = a;

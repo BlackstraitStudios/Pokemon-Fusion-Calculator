@@ -39,7 +39,7 @@ namespace Pokemon_Fusion_Calculator
             HttpWebRequest myRequest = (HttpWebRequest)WebRequest.Create(bakedUrl);
             myRequest.Method = "GET";
             WebResponse myResponse = myRequest.GetResponse();
-            StreamReader sr = new StreamReader(myResponse.GetResponseStream(), System.Text.Encoding.UTF8);
+            StreamReader sr = new StreamReader(myResponse.GetResponseStream(), Encoding.UTF8);
             
             string temp;
 
@@ -104,7 +104,6 @@ namespace Pokemon_Fusion_Calculator
         public void dothing()
         {
             int currentSize = 350;
-
             for (int i = 0; i <= currentSize; i++)
             {
                 writeLines[i] = new string[7];

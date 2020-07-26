@@ -31,7 +31,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.headComponent = new System.Windows.Forms.TextBox();
             this.bodyComponent = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.headLabelL = new System.Windows.Forms.Label();
@@ -66,15 +65,6 @@
             this.bodyComponent.Name = "bodyComponent";
             this.bodyComponent.Size = new System.Drawing.Size(100, 20);
             this.bodyComponent.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(366, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "fuse";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
@@ -167,7 +157,6 @@
             this.Controls.Add(this.headLabelL);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.bodyComponent);
             this.Controls.Add(this.headComponent);
             this.Controls.Add(this.pictureBox1);
@@ -185,7 +174,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox headComponent;
         private System.Windows.Forms.TextBox bodyComponent;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label headLabelL;
