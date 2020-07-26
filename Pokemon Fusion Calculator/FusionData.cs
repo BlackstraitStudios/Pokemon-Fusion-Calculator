@@ -8,6 +8,6 @@ namespace Pokemon_Fusion_Calculator
 {
     class FusionData
     {
-        //this is a testing comment intended for testing
+        //this fghffrffffr hello
     }
 }
