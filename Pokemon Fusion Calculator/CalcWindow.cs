@@ -21,10 +21,6 @@ namespace Pokemon_Fusion_Calculator
         Label[] rightMonLabels;
         Label[] rightPureLabels;
         Label[] leftPureLabels;
-        Label[] rightCompareLeft;
-        Label[] leftCompareLeft;
-        Label[] rightCompareRight;
-        Label[] leftCompareRight;
         Label[][] labelLists;
 
         public CalcWindow()
@@ -55,38 +51,18 @@ namespace Pokemon_Fusion_Calculator
             leftPureLabels = new Label[] { plHP, plATK, plDEF,
                                            plSPA, plSPD, plSPE };
 
-            rightCompareLeft = new Label[] {rolHP, rolATK, rolDEF,
-                                              rolSPA, rolSPD, rolSPE };
-
-            leftCompareLeft = new Label[] {lolHP, lolATK, lolDEF,
-                                             lolSPA, lolSPD, lolSPE };
-
-            rightCompareRight = new Label[] {rorHP, rorATK, rorDEF,
-                                             rorSPA, rorSPD, rorSPE };
-
-            leftCompareRight = new Label[] {lorHP, lorATK, lorDEF,
-                                           lorSPA, lorSPD, lorSPE };
-
-            labelLists = new Label[][] { leftMonLabels, rightMonLabels, leftPureLabels, rightPureLabels, leftCompareLeft, leftCompareRight, rightCompareLeft, rightCompareRight};
+            labelLists = new Label[][] { leftMonLabels, rightMonLabels, leftPureLabels, rightPureLabels };
         }
 
         void textbox_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter && headComponent.Text != "" && headComponent.Text != "")
             {
                 List<FusionData> temp = new List<FusionData>();
                 string a = char.ToUpper(headComponent.Text[0]) + headComponent.Text.Substring(1);
                 string b = char.ToUpper(bodyComponent.Text[0]) + bodyComponent.Text.Substring(1);
                 int hc = 1;
                 int bc = 1;
-                if (a[2] == '-' || a[2] == ' ')
-                {
-                    a = "Ho-Oh";
-                }
-                if (b[2] == '-' || b[2] == ' ')
-                {
-                    b = "Ho-Oh";
-                }
 
                 if (DexData.pokestats.ContainsKey(a) && DexData.pokestats.ContainsKey(b))
                 {
@@ -121,19 +97,14 @@ namespace Pokemon_Fusion_Calculator
                                                                      pokemonA.TypeException1;
 
                 t2 = pokemonB.TypeException1 == DexData.types.none ?
-                                                                     pokemonB.SecondaryType != DexData.types.none ?
-                                                                                                                    pokemonB.SecondaryType == t1 ?
-                                                                                                                                                   pokemonB.PrimaryType == t1 ?
-                                                                                                                                                                                DexData.types.none :
-                                                                                                                                                                                pokemonB.PrimaryType :
-                                                                                                                                                   pokemonB.SecondaryType :
-                                                                                                                    pokemonB.SecondaryType == t1 ?
+                                                                     pokemonB.SecondaryType == DexData.types.none ?
+                                                                                                                    pokemonB.PrimaryType == t1 ?
                                                                                                                                                  DexData.types.none :
-                                                                                                                                                 pokemonB.SecondaryType :
-                                                                    pokemonB.TypeException1;
-
-                                                                                                                                                    
-
+                                                                                                                                                 pokemonB.PrimaryType :
+                                                                                                                    pokemonB.SecondaryType == t1 ?
+                                                                                                                                                   pokemonB.PrimaryType :
+                                                                                                                                                   pokemonB.SecondaryType :                             
+                                                                     pokemonB.TypeException1;
             }
             else
             {
@@ -169,42 +140,30 @@ namespace Pokemon_Fusion_Calculator
                 for (int x = 0; x < 6; x++)
                 {
                     labelLists[i][x].Text = fusion[i].stats[x].ToString();
-                    labelLists[i][x].BackColor = fusion[i].stats[x] > fusion[Math.Abs(i - 1)].stats[x] ? 
+                    labelLists[i][x].BackColor = fusion[i].stats[x] > fusion[Math.Abs(i - 1)].stats[x] ?
                                                                                                          Color.Green :
                                                                                                          fusion[i].stats[x] == fusion[Math.Abs(i - 1)].stats[x] ?
                                                                                                                                                                   Color.Orange :
                                                                                                                                                                   Color.Red;
 
-
+                    plName.Text = a;
                     labelLists[2][x].Text = DexData.pokestats[b].statlist[x].ToString();
+                    labelLists[2][x].BackColor = DexData.pokestats[b].statlist[x] > fusion[Math.Abs(i - 1)].stats[x] ?
+                                                                                                                       Color.Green :
+                                                                                                                       DexData.pokestats[b].statlist[x] == fusion[Math.Abs(i - 1)].stats[x] ?
+                                                                                                                                                                                              Color.Orange :
+                                                                                                                                                                                              Color.Red;
+                    prName.Text = b;
                     labelLists[3][x].Text = DexData.pokestats[a].statlist[x].ToString();
+                    labelLists[3][x].BackColor = DexData.pokestats[a].statlist[x] > fusion[Math.Abs(i - 1)].stats[x] ?
+                                                                                                                       Color.Green :
+                                                                                                                       DexData.pokestats[a].statlist[x] == fusion[Math.Abs(i - 1)].stats[x] ?
+                                                                                                                                                                                              Color.Orange :
+                                                                                                                                                                                              Color.Red;
+
                 }
                 labelLists[i][6].Text = fusion[i].pType.ToString();
                 labelLists[i][7].Text = fusion[i].sType.ToString();
-            }
-
-            for (int x = 0; x < 6; x++)
-            {
-                labelLists[4][x].BackColor = DexData.pokestats[a].statlist[x] < fusion[0].stats[x] ?
-                                                                                                     Color.Green :
-                                                                                                     DexData.pokestats[a].statlist[x] == fusion[0].stats[x] ?
-                                                                                                                                                              Color.Orange :
-                                                                                                                                                              Color.Red;
-                labelLists[5][x].BackColor = DexData.pokestats[a].statlist[x] < fusion[1].stats[x] ?
-                                                                                                     Color.Green :
-                                                                                                     DexData.pokestats[a].statlist[x] == fusion[1].stats[x] ?
-                                                                                                                                                              Color.Orange :
-                                                                                                                                                              Color.Red;
-                labelLists[6][x].BackColor = DexData.pokestats[b].statlist[x] < fusion[0].stats[x] ?
-                                                                                                     Color.Green :
-                                                                                                     DexData.pokestats[b].statlist[x] == fusion[0].stats[x] ?
-                                                                                                                                                              Color.Orange :
-                                                                                                                                                              Color.Red;
-                labelLists[7][x].BackColor = DexData.pokestats[b].statlist[x] < fusion[1].stats[x] ?
-                                                                                                     Color.Green :
-                                                                                                     DexData.pokestats[b].statlist[x] == fusion[1].stats[x] ?
-                                                                                                                                                              Color.Orange :
-                                                                                                                                                              Color.Red;
             }
         }
 

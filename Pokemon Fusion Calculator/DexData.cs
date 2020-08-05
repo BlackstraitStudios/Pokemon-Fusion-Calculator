@@ -258,7 +258,7 @@ namespace Pokemon_Fusion_Calculator
 { "Pupitar", new PokeStat( "Pupitar", 247,  70, 84, 70, 65, 70, 51, types.rock, types.ground,   types.none, types.none, types.none) },
 { "Tyranitar", new PokeStat( "Tyranitar", 248,  100,    134,    110,    95, 100,    61, types.rock, types.dark, types.none, types.none, types.none) },
 { "Lugia", new PokeStat( "Lugia", 249,  106,    90, 130,    90, 154,    110,    types.psychic,  types.flying,   types.none, types.none, types.none) },
-{ "Ho-Oh", new PokeStat( "Ho-Oh", 250,  106,    130,    90, 110,    154,    90, types.fire, types.flying,   types.none, types.none, types.none) },
+{ "Ho-oh", new PokeStat( "Ho-oh", 250,  106,    130,    90, 110,    154,    90, types.fire, types.flying,   types.none, types.none, types.none) },
 { "Celebi", new PokeStat( "Celebi", 251,    100,    100,    100,    100,    100,    100,    types.grass,    types.psychic,  types.none, types.none, types.none) },
 { "Azurill", new PokeStat( "Azurill", 252,  50, 20, 40, 20, 40, 20, types.normal,   types.fairy,    types.none, types.none, types.none) },
 { "Wynaut", new PokeStat( "Wynaut", 253,    95, 23, 48, 23, 48, 23, types.psychic,  types.none, types.none, types.none, types.none) },

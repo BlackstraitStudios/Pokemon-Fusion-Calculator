@@ -85,30 +85,8 @@ namespace Pokemon_Fusion_Calculator
             this.plDEF = new System.Windows.Forms.Label();
             this.plATK = new System.Windows.Forms.Label();
             this.plHP = new System.Windows.Forms.Label();
-            this.rolSPE = new System.Windows.Forms.Label();
-            this.rolSPD = new System.Windows.Forms.Label();
-            this.rolDEF = new System.Windows.Forms.Label();
-            this.rolSPA = new System.Windows.Forms.Label();
-            this.rolHP = new System.Windows.Forms.Label();
-            this.rolATK = new System.Windows.Forms.Label();
-            this.lolHP = new System.Windows.Forms.Label();
-            this.lolATK = new System.Windows.Forms.Label();
-            this.lolDEF = new System.Windows.Forms.Label();
-            this.lolSPA = new System.Windows.Forms.Label();
-            this.lolSPD = new System.Windows.Forms.Label();
-            this.lolSPE = new System.Windows.Forms.Label();
-            this.rorHP = new System.Windows.Forms.Label();
-            this.rorATK = new System.Windows.Forms.Label();
-            this.rorDEF = new System.Windows.Forms.Label();
-            this.rorSPA = new System.Windows.Forms.Label();
-            this.rorSPD = new System.Windows.Forms.Label();
-            this.rorSPE = new System.Windows.Forms.Label();
-            this.lorHP = new System.Windows.Forms.Label();
-            this.lorATK = new System.Windows.Forms.Label();
-            this.lorDEF = new System.Windows.Forms.Label();
-            this.lorSPA = new System.Windows.Forms.Label();
-            this.lorSPD = new System.Windows.Forms.Label();
-            this.lorSPE = new System.Windows.Forms.Label();
+            this.plName = new System.Windows.Forms.Label();
+            this.prName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -628,299 +606,31 @@ namespace Pokemon_Fusion_Calculator
             this.plHP.Text = "HP";
             this.plHP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // rolSPE
+            // plName
             // 
-            this.rolSPE.BackColor = System.Drawing.SystemColors.Control;
-            this.rolSPE.Location = new System.Drawing.Point(416, 357);
-            this.rolSPE.MaximumSize = new System.Drawing.Size(10, 13);
-            this.rolSPE.Name = "rolSPE";
-            this.rolSPE.Size = new System.Drawing.Size(10, 13);
-            this.rolSPE.TabIndex = 55;
-            this.rolSPE.Text = "<";
-            this.rolSPE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.plName.AutoSize = true;
+            this.plName.Location = new System.Drawing.Point(322, 370);
+            this.plName.Name = "plName";
+            this.plName.Size = new System.Drawing.Size(13, 13);
+            this.plName.TabIndex = 55;
+            this.plName.Text = "a";
             // 
-            // rolSPD
+            // prName
             // 
-            this.rolSPD.BackColor = System.Drawing.SystemColors.Control;
-            this.rolSPD.Location = new System.Drawing.Point(416, 344);
-            this.rolSPD.MaximumSize = new System.Drawing.Size(10, 13);
-            this.rolSPD.Name = "rolSPD";
-            this.rolSPD.Size = new System.Drawing.Size(10, 13);
-            this.rolSPD.TabIndex = 56;
-            this.rolSPD.Text = "<";
-            this.rolSPD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rolDEF
-            // 
-            this.rolDEF.BackColor = System.Drawing.SystemColors.Control;
-            this.rolDEF.Location = new System.Drawing.Point(416, 318);
-            this.rolDEF.MaximumSize = new System.Drawing.Size(10, 13);
-            this.rolDEF.Name = "rolDEF";
-            this.rolDEF.Size = new System.Drawing.Size(10, 13);
-            this.rolDEF.TabIndex = 58;
-            this.rolDEF.Text = "<";
-            this.rolDEF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rolSPA
-            // 
-            this.rolSPA.BackColor = System.Drawing.SystemColors.Control;
-            this.rolSPA.Location = new System.Drawing.Point(416, 331);
-            this.rolSPA.MaximumSize = new System.Drawing.Size(10, 13);
-            this.rolSPA.Name = "rolSPA";
-            this.rolSPA.Size = new System.Drawing.Size(10, 13);
-            this.rolSPA.TabIndex = 57;
-            this.rolSPA.Text = "<";
-            this.rolSPA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rolHP
-            // 
-            this.rolHP.BackColor = System.Drawing.SystemColors.Control;
-            this.rolHP.Location = new System.Drawing.Point(416, 292);
-            this.rolHP.MaximumSize = new System.Drawing.Size(10, 13);
-            this.rolHP.Name = "rolHP";
-            this.rolHP.Size = new System.Drawing.Size(10, 13);
-            this.rolHP.TabIndex = 60;
-            this.rolHP.Text = "<";
-            this.rolHP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rolATK
-            // 
-            this.rolATK.BackColor = System.Drawing.SystemColors.Control;
-            this.rolATK.Location = new System.Drawing.Point(416, 305);
-            this.rolATK.MaximumSize = new System.Drawing.Size(10, 13);
-            this.rolATK.Name = "rolATK";
-            this.rolATK.Size = new System.Drawing.Size(10, 13);
-            this.rolATK.TabIndex = 59;
-            this.rolATK.Text = "<";
-            this.rolATK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lolHP
-            // 
-            this.lolHP.BackColor = System.Drawing.SystemColors.Control;
-            this.lolHP.Location = new System.Drawing.Point(325, 292);
-            this.lolHP.MaximumSize = new System.Drawing.Size(10, 13);
-            this.lolHP.Name = "lolHP";
-            this.lolHP.Size = new System.Drawing.Size(10, 13);
-            this.lolHP.TabIndex = 66;
-            this.lolHP.Text = "<";
-            this.lolHP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lolATK
-            // 
-            this.lolATK.BackColor = System.Drawing.SystemColors.Control;
-            this.lolATK.Location = new System.Drawing.Point(325, 305);
-            this.lolATK.MaximumSize = new System.Drawing.Size(10, 13);
-            this.lolATK.Name = "lolATK";
-            this.lolATK.Size = new System.Drawing.Size(10, 13);
-            this.lolATK.TabIndex = 65;
-            this.lolATK.Text = "<";
-            this.lolATK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lolDEF
-            // 
-            this.lolDEF.BackColor = System.Drawing.SystemColors.Control;
-            this.lolDEF.Location = new System.Drawing.Point(325, 318);
-            this.lolDEF.MaximumSize = new System.Drawing.Size(10, 13);
-            this.lolDEF.Name = "lolDEF";
-            this.lolDEF.Size = new System.Drawing.Size(10, 13);
-            this.lolDEF.TabIndex = 64;
-            this.lolDEF.Text = "<";
-            this.lolDEF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lolSPA
-            // 
-            this.lolSPA.BackColor = System.Drawing.SystemColors.Control;
-            this.lolSPA.Location = new System.Drawing.Point(325, 331);
-            this.lolSPA.MaximumSize = new System.Drawing.Size(10, 13);
-            this.lolSPA.Name = "lolSPA";
-            this.lolSPA.Size = new System.Drawing.Size(10, 13);
-            this.lolSPA.TabIndex = 63;
-            this.lolSPA.Text = "<";
-            this.lolSPA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lolSPD
-            // 
-            this.lolSPD.BackColor = System.Drawing.SystemColors.Control;
-            this.lolSPD.Location = new System.Drawing.Point(325, 344);
-            this.lolSPD.MaximumSize = new System.Drawing.Size(10, 13);
-            this.lolSPD.Name = "lolSPD";
-            this.lolSPD.Size = new System.Drawing.Size(10, 13);
-            this.lolSPD.TabIndex = 62;
-            this.lolSPD.Text = "<";
-            this.lolSPD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lolSPE
-            // 
-            this.lolSPE.BackColor = System.Drawing.SystemColors.Control;
-            this.lolSPE.Location = new System.Drawing.Point(325, 357);
-            this.lolSPE.MaximumSize = new System.Drawing.Size(10, 13);
-            this.lolSPE.Name = "lolSPE";
-            this.lolSPE.Size = new System.Drawing.Size(10, 13);
-            this.lolSPE.TabIndex = 61;
-            this.lolSPE.Text = "<";
-            this.lolSPE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rorHP
-            // 
-            this.rorHP.BackColor = System.Drawing.SystemColors.Control;
-            this.rorHP.Location = new System.Drawing.Point(466, 292);
-            this.rorHP.MaximumSize = new System.Drawing.Size(10, 13);
-            this.rorHP.Name = "rorHP";
-            this.rorHP.Size = new System.Drawing.Size(10, 13);
-            this.rorHP.TabIndex = 72;
-            this.rorHP.Text = ">";
-            this.rorHP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rorATK
-            // 
-            this.rorATK.BackColor = System.Drawing.SystemColors.Control;
-            this.rorATK.Location = new System.Drawing.Point(466, 305);
-            this.rorATK.MaximumSize = new System.Drawing.Size(10, 13);
-            this.rorATK.Name = "rorATK";
-            this.rorATK.Size = new System.Drawing.Size(10, 13);
-            this.rorATK.TabIndex = 71;
-            this.rorATK.Text = ">";
-            this.rorATK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rorDEF
-            // 
-            this.rorDEF.BackColor = System.Drawing.SystemColors.Control;
-            this.rorDEF.Location = new System.Drawing.Point(466, 318);
-            this.rorDEF.MaximumSize = new System.Drawing.Size(10, 13);
-            this.rorDEF.Name = "rorDEF";
-            this.rorDEF.Size = new System.Drawing.Size(10, 13);
-            this.rorDEF.TabIndex = 70;
-            this.rorDEF.Text = ">";
-            this.rorDEF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rorSPA
-            // 
-            this.rorSPA.BackColor = System.Drawing.SystemColors.Control;
-            this.rorSPA.Location = new System.Drawing.Point(466, 331);
-            this.rorSPA.MaximumSize = new System.Drawing.Size(10, 13);
-            this.rorSPA.Name = "rorSPA";
-            this.rorSPA.Size = new System.Drawing.Size(10, 13);
-            this.rorSPA.TabIndex = 69;
-            this.rorSPA.Text = ">";
-            this.rorSPA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rorSPD
-            // 
-            this.rorSPD.BackColor = System.Drawing.SystemColors.Control;
-            this.rorSPD.Location = new System.Drawing.Point(466, 344);
-            this.rorSPD.MaximumSize = new System.Drawing.Size(10, 13);
-            this.rorSPD.Name = "rorSPD";
-            this.rorSPD.Size = new System.Drawing.Size(10, 13);
-            this.rorSPD.TabIndex = 68;
-            this.rorSPD.Text = ">";
-            this.rorSPD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rorSPE
-            // 
-            this.rorSPE.BackColor = System.Drawing.SystemColors.Control;
-            this.rorSPE.Location = new System.Drawing.Point(466, 357);
-            this.rorSPE.MaximumSize = new System.Drawing.Size(10, 13);
-            this.rorSPE.Name = "rorSPE";
-            this.rorSPE.Size = new System.Drawing.Size(10, 13);
-            this.rorSPE.TabIndex = 67;
-            this.rorSPE.Text = ">";
-            this.rorSPE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lorHP
-            // 
-            this.lorHP.BackColor = System.Drawing.SystemColors.Control;
-            this.lorHP.Location = new System.Drawing.Point(377, 292);
-            this.lorHP.MaximumSize = new System.Drawing.Size(10, 13);
-            this.lorHP.Name = "lorHP";
-            this.lorHP.Size = new System.Drawing.Size(10, 13);
-            this.lorHP.TabIndex = 78;
-            this.lorHP.Text = ">";
-            this.lorHP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lorATK
-            // 
-            this.lorATK.BackColor = System.Drawing.SystemColors.Control;
-            this.lorATK.Location = new System.Drawing.Point(377, 305);
-            this.lorATK.MaximumSize = new System.Drawing.Size(10, 13);
-            this.lorATK.Name = "lorATK";
-            this.lorATK.Size = new System.Drawing.Size(10, 13);
-            this.lorATK.TabIndex = 77;
-            this.lorATK.Text = ">";
-            this.lorATK.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lorDEF
-            // 
-            this.lorDEF.BackColor = System.Drawing.SystemColors.Control;
-            this.lorDEF.Location = new System.Drawing.Point(377, 318);
-            this.lorDEF.MaximumSize = new System.Drawing.Size(10, 13);
-            this.lorDEF.Name = "lorDEF";
-            this.lorDEF.Size = new System.Drawing.Size(10, 13);
-            this.lorDEF.TabIndex = 76;
-            this.lorDEF.Text = ">";
-            this.lorDEF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lorSPA
-            // 
-            this.lorSPA.BackColor = System.Drawing.SystemColors.Control;
-            this.lorSPA.Location = new System.Drawing.Point(377, 331);
-            this.lorSPA.MaximumSize = new System.Drawing.Size(10, 13);
-            this.lorSPA.Name = "lorSPA";
-            this.lorSPA.Size = new System.Drawing.Size(10, 13);
-            this.lorSPA.TabIndex = 75;
-            this.lorSPA.Text = ">";
-            this.lorSPA.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lorSPD
-            // 
-            this.lorSPD.BackColor = System.Drawing.SystemColors.Control;
-            this.lorSPD.Location = new System.Drawing.Point(377, 344);
-            this.lorSPD.MaximumSize = new System.Drawing.Size(10, 13);
-            this.lorSPD.Name = "lorSPD";
-            this.lorSPD.Size = new System.Drawing.Size(10, 13);
-            this.lorSPD.TabIndex = 74;
-            this.lorSPD.Text = ">";
-            this.lorSPD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lorSPE
-            // 
-            this.lorSPE.BackColor = System.Drawing.SystemColors.Control;
-            this.lorSPE.Location = new System.Drawing.Point(377, 357);
-            this.lorSPE.MaximumSize = new System.Drawing.Size(10, 13);
-            this.lorSPE.Name = "lorSPE";
-            this.lorSPE.Size = new System.Drawing.Size(10, 13);
-            this.lorSPE.TabIndex = 73;
-            this.lorSPE.Text = ">";
-            this.lorSPE.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.prName.AutoSize = true;
+            this.prName.Location = new System.Drawing.Point(413, 370);
+            this.prName.Name = "prName";
+            this.prName.Size = new System.Drawing.Size(13, 13);
+            this.prName.TabIndex = 56;
+            this.prName.Text = "a";
             // 
             // CalcWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lorHP);
-            this.Controls.Add(this.lorATK);
-            this.Controls.Add(this.lorDEF);
-            this.Controls.Add(this.lorSPA);
-            this.Controls.Add(this.lorSPD);
-            this.Controls.Add(this.lorSPE);
-            this.Controls.Add(this.rorHP);
-            this.Controls.Add(this.rorATK);
-            this.Controls.Add(this.rorDEF);
-            this.Controls.Add(this.rorSPA);
-            this.Controls.Add(this.rorSPD);
-            this.Controls.Add(this.rorSPE);
-            this.Controls.Add(this.lolHP);
-            this.Controls.Add(this.lolATK);
-            this.Controls.Add(this.lolDEF);
-            this.Controls.Add(this.lolSPA);
-            this.Controls.Add(this.lolSPD);
-            this.Controls.Add(this.lolSPE);
-            this.Controls.Add(this.rolHP);
-            this.Controls.Add(this.rolATK);
-            this.Controls.Add(this.rolDEF);
-            this.Controls.Add(this.rolSPA);
-            this.Controls.Add(this.rolSPD);
-            this.Controls.Add(this.rolSPE);
+            this.Controls.Add(this.prName);
+            this.Controls.Add(this.plName);
             this.Controls.Add(this.prSPE);
             this.Controls.Add(this.prSPD);
             this.Controls.Add(this.prSPA);
@@ -1040,30 +750,8 @@ namespace Pokemon_Fusion_Calculator
         private System.Windows.Forms.Label plDEF;
         private System.Windows.Forms.Label plATK;
         private System.Windows.Forms.Label plHP;
-        private System.Windows.Forms.Label rolSPE;
-        private System.Windows.Forms.Label rolSPD;
-        private System.Windows.Forms.Label rolDEF;
-        private System.Windows.Forms.Label rolSPA;
-        private System.Windows.Forms.Label rolHP;
-        private System.Windows.Forms.Label rolATK;
-        private System.Windows.Forms.Label lolHP;
-        private System.Windows.Forms.Label lolATK;
-        private System.Windows.Forms.Label lolDEF;
-        private System.Windows.Forms.Label lolSPA;
-        private System.Windows.Forms.Label lolSPD;
-        private System.Windows.Forms.Label lolSPE;
-        private System.Windows.Forms.Label rorHP;
-        private System.Windows.Forms.Label rorATK;
-        private System.Windows.Forms.Label rorDEF;
-        private System.Windows.Forms.Label rorSPA;
-        private System.Windows.Forms.Label rorSPD;
-        private System.Windows.Forms.Label rorSPE;
-        private System.Windows.Forms.Label lorHP;
-        private System.Windows.Forms.Label lorATK;
-        private System.Windows.Forms.Label lorDEF;
-        private System.Windows.Forms.Label lorSPA;
-        private System.Windows.Forms.Label lorSPD;
-        private System.Windows.Forms.Label lorSPE;
+        private System.Windows.Forms.Label plName;
+        private System.Windows.Forms.Label prName;
     }
 }
 
