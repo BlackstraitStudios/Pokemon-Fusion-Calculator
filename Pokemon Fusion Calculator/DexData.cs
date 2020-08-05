@@ -59,7 +59,7 @@ namespace Pokemon_Fusion_Calculator
 { "Venonat", new PokeStat( "Venonat", 48,   60, 55, 50, 40, 55, 45, types.bug,  types.poison,   types.none, types.none, types.none) },
 { "Venomoth", new PokeStat( "Venomoth", 49, 70, 65, 60, 90, 75, 90, types.bug,  types.poison,   types.none, types.none, types.none) },
 { "Diglett", new PokeStat( "Diglett", 50,   10, 55, 25, 35, 45, 95, types.ground,   types.none, types.none, types.ground,   types.ground) },
-{ "Dugtrio", new PokeStat( "Dugtrio", 51,   35, 80, 50, 50, 70, 120,    types.ground,   types.none, types.none, types.ground,   types.ground) },
+{ "Dugtrio", new PokeStat( "Dugtrio", 51,   35, 80, 50, 50, 70, 120,    types.ground,   types.none, types.none, types.ground,   types.steel) },
 { "Meowth", new PokeStat( "Meowth", 52, 40, 45, 35, 40, 40, 90, types.normal,   types.none, types.none, types.dark, types.dark) },
 { "Persian", new PokeStat( "Persian", 53,   65, 70, 60, 65, 65, 115,    types.normal,   types.none, types.none, types.dark, types.dark) },
 { "Psyduck", new PokeStat( "Psyduck", 54,   50, 52, 48, 65, 50, 55, types.water,    types.none, types.none, types.none, types.none) },

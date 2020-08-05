@@ -25,7 +25,7 @@ namespace Pokemon_Fusion_Calculator.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("aaaa")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string GameDirectory {
             get {
                 return ((string)(this["GameDirectory"]));

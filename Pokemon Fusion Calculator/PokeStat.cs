@@ -21,6 +21,7 @@ namespace Pokemon_Fusion_Calculator
         public int SpAtk = 0;
         public int SpDef = 0;
         public int Speed = 0;
+        public int[] statlist;
 
         public PokeStat(string n, int d, int hp, int atk, int def, int spa, int spd, int spe, DexData.types pt, DexData.types st, DexData.types e1, DexData.types e2, DexData.types e3)
         {
@@ -37,6 +38,7 @@ namespace Pokemon_Fusion_Calculator
             SpAtk = spa;
             SpDef = spd;
             Speed = spe;
+            statlist = new int[] {hp, atk, def, spa, spd, spe};
         }
     }
 }
